@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>ES6, Babel and Webpack</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="node_modules/vis/dist/vis.min.css">
+    
+    <link rel="stylesheet" href="css/theme.css" id="theme">
+    
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../bower_components/highlightjs/styles/pojoaque.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+        <!--[if lt IE 9]>
+        <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="turb">
+            <defs>
+                <filter id="squiggly-0">
+                    <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="2" result="noise" seed="0"/>
+                    <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="4" />
+                </filter>
+                <filter id="squiggly-1">
+                    <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="2" result="noise" seed="1"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+                </filter>
+
+                <filter id="squiggly-2">
+                    <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="2" result="noise" seed="2"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+                </filter>
+                <filter id="squiggly-3">
+                    <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="2" result="noise" seed="3"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+                </filter>
+
+                <filter id="squiggly-4">
+                    <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="2" result="noise" seed="4"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+                </filter>
+            </defs> 
+        </svg>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                
+                
+                
+    <section data-markdown="slides/index.md"></section>
+
+
+                
+                
+                
+                
+                
+    <section data-markdown="slides/series.md"></section>
+
+
+                
+                
+                
+                
+                
+                <section>
+                    
+                    
+    <section data-markdown="slides/es6-naming.md"></section>
+
+
+                    
+                    
+    <section data-html="slides/es6-history.html"></section>
+
+
+                    
+                    
+    <section data-markdown="slides/nested-callbacks.md"></section>
+
+
+                    
+                    
+    <section data-markdown="slides/callback-hell.md"></section>
+
+
+                    
+                    
+    <section data-html="slides/es6-promises.html"></section>
+
+
+                    
+                    
+    <section data-markdown="slides/es6-built-in-functions.md"></section>
+
+
+                    
+                    
+    <section data-markdown="slides/es6-modules.md"></section>
+
+
+                    
+                    
+    <section data-html="slides/es6-live-coding.html"></section>
+
+
+                    
+                </section>
+                
+                
+                
+                
+    <section data-html="slides/traditional-file-structure.html"></section>
+
+
+                
+                
+                
+                
+                
+    <section data-html="slides/webpack-live-network.html"></section>
+
+
+                
+                
+                
+            </div>
+
+        </div>
+
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+        <script src="node_modules/vis/dist/vis.min.js"></script>
+
+        <script>
+
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+            { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+            { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+            { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } },
+            ]
+        });
+
+          const baseNode = {
+            shape: 'image'
+        };
+
+        const baseNodeSmall = {
+            shape: 'image',
+            size: 20,
+        };
+
+        const jsNode = {
+            image: 'resources/img/circle-js.svg', 
+            group: "js",
+            color: "#F6A623",
+            font: { color: "#f2be82", face: "Fira Mono", size: 14 },
+        }
+
+        const erbNode  = {
+            image: 'resources/img/circle-erb.svg', 
+            group: "erb",
+            color: "#E15454",
+            font: { color: "#EC9191", face: "Fira Mono", size: 14 },
+        }
+
+        const cssNode = {
+            image: 'resources/img/circle-scss.svg' ,
+            group: "css",
+            color: "#9DC85E",
+            font: { color: "#C6E49A", face: "Fira Mono", size: 14 }
+        }
+
+        const imageNode = {
+            image: 'resources/img/circle-image.svg' ,
+            group: "img",
+            color: "#A476CD",
+            font: { color: "#C9AAE6", face: "Fira Mono", size: 14 }
+        }
+
+
+        const jsonNode = {
+            image: 'resources/img/circle-json.svg' ,
+            group: "json"
+        }
+
+        const entryNode = {
+            image: 'resources/img/circle-entry.svg' ,
+            group: "entry",
+            font: { color: "#a0d6e8", face: "Fira Mono", size: 14 },
+            fixed: true,
+        }
+
+        Reveal.addEventListener( 'webpackLive', function() {
+
+            var nodesArray = [
+            Object.assign({id: 'home-scss', label: 'home.scss',
+                x: 0, y: - window.innerHeight * 0.2 }, baseNodeSmall, cssNode),
+
+            Object.assign({id: 'button', label: 'Button',  size:30, 
+                x: -window.innerWidth * 0.16, y: window.innerHeight * 0.18 }, baseNode, jsNode),
+            Object.assign({id: 'button-scss', label: 'button.scss',
+                x: -window.innerWidth * 0.18, y: window.innerHeight * 0.2 }, baseNodeSmall, cssNode),
+
+            Object.assign({id: 'image-banner', label: 'Image Banner', size:30,
+                x: window.innerWidth * 0.1, y: window.innerHeight * 0.25 }, baseNode, jsNode),
+            Object.assign({id: 'image-banner-scss', label: 'image-banner.scss',
+                x: - window.innerWidth * 0.02, y: window.innerHeight * 0.15}, baseNodeSmall, cssNode),
+
+            Object.assign({id: 'taxon-showcase', label: 'Taxon Showcase', size:30,
+                x: -window.innerWidth * 0.2, y: - window.innerHeight * 0.25 }, baseNode, jsNode),
+            Object.assign({id: 'taxon-showcase-scss', label: 'taxon-showcase.scss',
+                x: -window.innerWidth * 0.22, y: - window.innerHeight * 0.22}, baseNodeSmall, cssNode),
+
+            Object.assign({id: 'category-browse', label: 'Category Browser', size:30,
+                x: window.innerWidth * 0.2, y: - window.innerHeight * 0.13}, baseNode, jsNode),
+            Object.assign({id: 'category-browse-scss', label: 'category-browser.scss',
+                x: window.innerWidth * 0.24, y: window.innerHeight * 0.05}, baseNodeSmall, cssNode),
+
+            Object.assign({id: 'bean-bag', label: 'bean_bags.svg',
+                x: window.innerWidth * 0.15, y: - window.innerHeight * 0.2}, baseNodeSmall, imageNode),
+            Object.assign({id: 'beds', label: 'bookshelves.svg', 
+                x: window.innerWidth * 0.2, y: - window.innerHeight * 0.18}, baseNodeSmall, imageNode),
+            Object.assign({id: 'chairs', label: 'chairs.svg',
+                x: window.innerWidth * 0.18, y: - window.innerHeight * 0.16}, baseNodeSmall, imageNode),
+            Object.assign({id: 'decor', label: 'decor.svg',
+                x: window.innerWidth * 0.25, y: - window.innerHeight * 0.14}, baseNodeSmall, imageNode),
+            Object.assign({id: 'dining', label: 'dining.svg', 
+                x: window.innerWidth * 0.17, y: - window.innerHeight * 0.2}, baseNodeSmall, imageNode),
+            Object.assign({id: 'sofas', label: 'sofas.svg', 
+                x: window.innerWidth * 0.23, y: - window.innerHeight * 0.22}, baseNodeSmall, imageNode)
+
+            ]
+
+            var nodes = new vis.DataSet([
+                Object.assign({id: 'home', label: 'Homepage'}, baseNode, entryNode),
+                ]);
+
+            var edgesArray = [
+            {from: 'home-scss', to: 'home'},
+
+            {from: 'button', to: 'home'},
+            {from: 'button-scss', to: 'button'},
+
+            {from: 'image-banner', to: 'home'},
+            {from: 'image-banner-scss', to: 'image-banner', length: 10},
+
+            {from: 'taxon-showcase', to: 'home'},
+            {from: 'taxon-showcase-scss', to: 'taxon-showcase', length: 10},
+
+            {from: 'category-browse', to: 'home'},
+            {from: 'category-browse-scss', to: 'category-browse', length: 10},
+
+            {from: 'bean-bag', to: 'category-browse', length: 10},
+            {from: 'beds', to: 'category-browse', length: 10},
+            {from: 'chairs', to: 'category-browse', length: 10},
+            {from: 'decor', to: 'category-browse', length: 10},
+            {from: 'dining', to: 'category-browse', length: 10},
+            {from: 'sofas', to: 'category-browse', length: 10},
+            ]
+
+
+            // create an array with edges
+            var edges = new vis.DataSet();
+
+            // create a network
+            var container = document.getElementById('webpack-live-graph');
+
+            // provide the data in the vis format
+            var data = {
+                nodes: nodes,
+                edges: edges
+            };
+
+            var options = {
+                interaction :{
+                    dragView: false,
+                },
+                edges: {
+                    color: { opacity: 0.4 }
+                },
+                physics: {
+                    stabilization: false,
+                    timestep: 0.05,
+                    barnesHut: {
+                        damping: 0.08,
+                        centralGravity: 0.05,
+                        avoidOverlap: 0.3,
+                        springConstant: 0.05
+                    },
+                }
+            };
+
+            // initialize your network!
+            var network = new vis.Network(container, data, options);
+            var counter = nodesArray.length
+            var intervalID = setInterval(() => {
+                if(counter-- == 0) {
+                    options.physics.barnesHut.damping = 0
+                    options.physics.maxVelocity = 2
+                    network.setOptions(options)
+                    clearInterval(intervalID)
+                }
+                nodes.add(nodesArray.shift());
+                edges.add(edgesArray.shift());
+            },1500);
+        }, false );
+
+Reveal.addEventListener( 'heirarchyGraph', function() {
+
+    var hnodes = new vis.DataSet([
+        Object.assign({id: 'home', label: 'Homepage'}, baseNode, entryNode),
+        Object.assign({id: 'css', label: 'CSS', size:35}, baseNode, cssNode),
+        Object.assign({id: 'erb', label: 'ERB Templates', size:35}, baseNode, erbNode),
+        Object.assign({id: 'js', label: 'JavaScript', size:35}, baseNode, jsNode),
+        Object.assign({id: 'img', label: 'Images', size:35}, baseNode, imageNode),
+
+        Object.assign({id: 'home-scss', label: 'home.scss'}, baseNode, cssNode),
+
+        Object.assign({id: 'button', label: 'Button'}, baseNode, jsNode),
+        Object.assign({id: 'button-erb', label: 'Button.erb'}, baseNode, erbNode),
+        Object.assign({id: 'button-scss', label: 'button.scss'}, baseNode, cssNode),
+
+        Object.assign({id: 'image-banner', label: 'Image Banner'}, baseNode, jsNode),
+        Object.assign({id: 'image-banner-erb', label: 'Image Banner.erb'}, baseNode, erbNode),
+        Object.assign({id: 'image-banner-scss', label: 'image-banner.scss'}, baseNode, cssNode),
+
+        Object.assign({id: 'taxon-showcase', label: 'Taxon Showcase'}, baseNode, jsNode),
+        Object.assign({id: 'taxon-showcase-erb', label: 'Taxon Showcase.erb'}, baseNode, erbNode),
+        Object.assign({id: 'taxon-showcase-scss', label: 'taxon-showcase.scss'}, baseNode, cssNode),
+
+        Object.assign({id: 'category-browse', label: 'Category Browser'}, baseNode, jsNode),
+        Object.assign({id: 'category-browse-erb', label: 'Category-browser.erb'}, baseNode, erbNode),
+        Object.assign({id: 'category-browse-scss', label: 'category-browser.scss'}, baseNode, cssNode),
+
+        Object.assign({id: 'bean-bag', label: 'bean_bags.svg'}, baseNode, imageNode),
+        Object.assign({id: 'beds', label: 'bookshelves.svg'}, baseNode, imageNode),
+        Object.assign({id: 'chairs', label: 'chairs.svg'}, baseNode, imageNode),
+        Object.assign({id: 'decor', label: 'decor.svg'}, baseNode, imageNode),
+        Object.assign({id: 'dining', label: 'dining.svg'}, baseNode, imageNode),
+        Object.assign({id: 'sofas', label: 'sofas.svg'}, baseNode, imageNode)
+        ]);
+
+
+
+            // create an array with edges
+            var hedges = new vis.DataSet([
+                {from: 'home-scss', to: 'css'},
+                {from: 'css', to: 'home'},
+                {from: 'erb', to: 'home'},
+                {from: 'js', to: 'home'},
+                {from: 'img', to: 'home'},
+
+
+                {from: 'button', to: 'js'},
+                {from: 'button-erb', to: 'erb'},
+                {from: 'button-scss', to: 'css'},
+
+                {from: 'image-banner', to: 'js'},
+                {from: 'image-banner-erb', to: 'erb'},
+                {from: 'image-banner-scss', to: 'css'},
+
+                {from: 'taxon-showcase', to: 'js'},
+                {from: 'taxon-showcase-erb', to: 'erb'},
+                {from: 'taxon-showcase-scss', to: 'css'},
+
+                {from: 'category-browse', to: 'js'},
+                {from: 'category-browse-erb', to: 'erb'},
+                {from: 'category-browse-scss', to: 'css'},
+
+                {from: 'bean-bag', to: 'img'},
+                {from: 'beds', to: 'img'},
+                {from: 'chairs', to: 'img'},
+                {from: 'decor', to: 'img'},
+                {from: 'dining', to: 'img'},
+                {from: 'sofas', to: 'img'},
+                ]);
+
+            // create a network
+            var hcontainer = document.getElementById('heirarchy-graph');
+
+            // provide the data in the vis format
+            var hdata = {
+                nodes: hnodes,
+                edges: hedges
+            };
+
+            var hoptions = {
+                interaction :{
+                    dragView: false,
+                },
+                edges: {
+                    color: { opacity: 0.4 }
+                },
+                layout: {
+                    heirarchial: {
+                        direction: "Up-Down"
+                    },
+                },
+            };
+
+            // initialize your network!
+            var hnetwork = new vis.Network(hcontainer,hdata, hoptions);
+
+        }, false );
+
+
+    </script>
+</body>
+
+</html>

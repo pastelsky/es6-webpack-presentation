@@ -1,0 +1,16 @@
+[
+    "index.md",
+    "series.md",
+    [
+        "es6-naming.md",
+        "es6-history.html",
+        "nested-callbacks.md",
+        "callback-hell.md",
+        "es6-promises.html",
+        "es6-built-in-functions.md",
+        "es6-modules.md",
+        "es6-live-coding.html"
+    ],
+    "traditional-file-structure.html",
+    "webpack-live-network.html"
+]

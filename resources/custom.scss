@@ -1,0 +1,105 @@
+/*********************************************
+ * CUSTOM
+ *********************************************/
+
+ .reveal em {
+    color: #65E3D1;
+    font-style: normal;
+    -webkit-animation: squiggly-anim 0.34s linear infinite;
+    animation: squiggly-anim 0.34s linear infinite;
+}
+
+.hljs {
+    background: #201e28 !important;
+}
+
+.reveal li {
+    margin: 1em 0;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+}
+
+#turb {
+    width: 0;
+    height: 0;
+    position:absolute;
+
+}
+
+.reveal .slides {
+    position: relative !important;
+    font-size: 0.7em;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.reveal .CodeMirror {
+    font-family: "Fira Mono" !important;
+    font-size: 0.65em;
+    text-align: left;
+}
+
+.es6-balloon {
+    animation: fly-balloon 8s alternate infinite;
+    transform-origin: 50% 100%;
+    overflow: visible;
+}
+
+.es6-history-infographic {
+    width: 60vw;
+    margin-top: 2em;
+}
+
+#webpack-live-graph, #heirarchy-graph  {
+    width: 70vw;
+    height: 90vh;
+}
+
+section[data-state="webpackLive"], section[data-state="heirarchyGraph"] {
+  padding: 0;
+}
+
+
+.slides {
+  left: 0 !important;
+  top: 0 !important;
+  transform: none !important;
+}
+
+@keyframes squiggly-anim {
+    0% {
+        -webkit-filter: url("#squiggly-0");
+        filter: url("#squiggly-0");
+    }
+    25% {
+        -webkit-filter: url("#squiggly-1");
+        filter: url("#squiggly-1");
+    }
+    50% {
+        -webkit-filter: url("#squiggly-2");
+        filter: url("#squiggly-2");
+    }
+    75% {
+        -webkit-filter: url("#squiggly-3");
+        filter: url("#squiggly-3");
+    }
+    100% {
+        -webkit-filter: url("#squiggly-4");
+        filter: url("#squiggly-4");
+    }
+}
+
+@keyframes fly-balloon {
+    0% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: scaleY(0.9) rotate(0deg);
+    }
+    100% {
+        transform: rotate(4deg);
+    }
+}
