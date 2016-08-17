@@ -12,8 +12,8 @@ Array.fill()
 // Search for a value in an array — alternate to indexOf
 Array.find() 
 
-// find the positional index of the matched value
-Array.findIndex() 
+// cleaner than Array.indexOf
+Array.includes() 
 ```
 
 Object

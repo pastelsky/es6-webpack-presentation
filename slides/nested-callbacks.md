@@ -1,21 +1,18 @@
 ## Nested Callbacks
 
 ```javascript
-$.get(url, function(data) {
 
-    $.getJSON(url2, function(data) {
-
-      $.post(url3, function(data) {
-
-          doSomethingInteresting();
-
-          $.get(url4, function(data) {
-              // All done.
-          });
-
-      });
-
-    });
-    
-});
+spree.auth.signup(function () {
+    spree.auth.login(function() {
+        //handle success
+        redirect();
+    },  function() {
+          // handle failure
+          showError();
+        })
+    },
+    function() {
+        // handle failure
+        showError();
+})
 ```

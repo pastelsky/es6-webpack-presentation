@@ -293,6 +293,18 @@ body {
   -webkit-animation: squiggly-anim 0.34s linear infinite;
   animation: squiggly-anim 0.34s linear infinite; }
 
+i {
+  color: #65E3D1;
+  font-style: normal; }
+
+p {
+  line-height: 1.5 !important; }
+
+.reveal .plain-img {
+  background: transparent;
+  border: none;
+  box-shadow: none; }
+
 .hljs {
   background: #201e28 !important; }
 
@@ -307,12 +319,6 @@ body {
   width: 0;
   height: 0;
   position: absolute; }
-
-.reveal .slides {
-  position: relative !important;
-  font-size: 0.7em;
-  width: 100% !important;
-  height: 100% !important; }
 
 .reveal .CodeMirror {
   font-family: "Fira Mono" !important;
@@ -329,11 +335,22 @@ body {
   margin-top: 2em; }
 
 #webpack-live-graph, #heirarchy-graph {
-  width: 70vw;
-  height: 90vh; }
+  width: 90vw;
+  height: 90vh;
+  margin: auto !important; }
+
+.vis-network {
+  width: 100% !important;
+  height: 100% !important; }
+
+.code {
+  font-family: "Fira Mono" !important; }
 
 section[data-state="webpackLive"], section[data-state="heirarchyGraph"] {
   padding: 0; }
+
+.padded {
+  padding: 5vh 20vw; }
 
 .slides {
   left: 0 !important;

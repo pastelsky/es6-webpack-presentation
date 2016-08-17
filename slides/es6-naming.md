@@ -1,4 +1,4 @@
-## The ECMAScript slang
+## The ECMAScript vocab
 ###<i>(ek-mas-kɾipt)</i>
 
 ECMA International and TC39

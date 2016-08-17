@@ -1,16 +1,34 @@
 [
-    "index.md",
     "series.md",
     [
+        "a-tale-of-two-flying-machines.html",
+        "js-video-1.html",
+        "js-video-2.html",
+        "javascript-everywhere.html"
+    ],
+    [
+        "ecmascript-6.html",
         "es6-naming.md",
-        "es6-history.html",
+        "es6-history.md",
+        "es6-strings.md",
+        "es6-arrow-function.md",
+        "es6-classes.md",
         "nested-callbacks.md",
         "callback-hell.md",
-        "es6-promises.html",
+        "es6-promises.md",
+        "es6-promise-example.md",
         "es6-built-in-functions.md",
-        "es6-modules.md",
-        "es6-live-coding.html"
+        "browser-support.html"
     ],
+    "babel.md",
+    "es6-modules.md",
+    "task-runners.html",
+    "webpack.html",
     "traditional-file-structure.html",
-    "webpack-live-network.html"
+    "webpack-live-network.html",
+    "webpack-loaders.md",
+    "webpack-entry-points-img.html",
+    "webpack-entry-points.md",
+    "webpack-async-modules.md",
+    "webpack-loaders-code.md"
 ]

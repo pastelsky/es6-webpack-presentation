@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="244px" height="135px" viewBox="0 0 244 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(0.000000, -11.000000)">
+            <g id="Group-2">
+                <g id="Group-3" transform="translate(0.000000, 62.000000)">
+                    <path d="M0.529636795,6.75539928 C21.4010578,3.04221775 51.0133835,-0.963434085 71.9870664,4.0925712 C77.430616,5.40481644 77.141348,24.1913504 74.5655235,27.1160977 C71.9896991,30.040845 18.8774243,33.1687206 4.96196004,31.7185502 C-2.03439106,30.9894405 3.73653526,1.78804721 3.73653526,1.78804721" id="Path-2" stroke="#66C9DD" transform="translate(38.437887, 16.897605) rotate(-358.000000) translate(-38.437887, -16.897605) "></path>
+                    <text id="PROMISE" font-family="ComingSoon, Coming Soon" font-size="10" font-weight="normal" fill="#92B9E6">
+                        <tspan x="18" y="21">PROMISE</tspan>
+                    </text>
+                </g>
+                <path d="M153.506937,43.7456822 C174.378358,40.0325007 203.990683,36.0268489 224.964366,41.0828541 C230.407916,42.3950994 230.118648,61.1816333 227.542823,64.1063806 C224.966999,67.0311279 171.854724,70.1590035 157.93926,68.7088332 C150.942909,67.9797234 156.713835,38.7783302 156.713835,38.7783302" id="Path-2" stroke="#66C9DD" transform="translate(191.415187, 53.887888) rotate(-358.000000) translate(-191.415187, -53.887888) "></path>
+                <text id="REJECTED" font-family="ComingSoon, Coming Soon" font-size="10" font-weight="normal" fill="#DDA483">
+                    <tspan x="171" y="57.3868527">REJECTED</tspan>
+                </text>
+                <text id="PENDING" font-family="ComingSoon, Coming Soon" font-size="10" font-weight="normal" fill="#D9D197">
+                    <tspan x="95" y="80">PENDING</tspan>
+                </text>
+                <text id="Settled" font-family="ComingSoon, Coming Soon" font-size="10" font-weight="normal" fill="#B7D9D7">
+                    <tspan x="202" y="20">Settled</tspan>
+                </text>
+                <g id="Group" transform="translate(158.000000, 81.000000)">
+                    <path d="M0.506936715,6.74568223 C21.3783577,3.0325007 50.9906834,-0.973151144 71.9643663,4.08285414 C77.4079159,5.39509938 77.1186479,24.1816333 74.5428235,27.1063806 C71.966999,30.0311279 18.8547243,33.1590035 4.93925996,31.7088332 C-2.05709114,30.9797234 3.71383518,1.77833015 3.71383518,1.77833015" id="Path-2" stroke="#66C9DD" transform="translate(38.415187, 16.887888) rotate(-358.000000) translate(-38.415187, -16.887888) "></path>
+                    <text id="FULFILLED" font-family="ComingSoon, Coming Soon" font-size="10" font-weight="normal" fill="#A0E0B6">
+                        <tspan x="18" y="20.3868527">FULFILLED</tspan>
+                    </text>
+                </g>
+                <path d="M34.9202452,145.255313 C62.4428658,103.419674 161.304413,82.4080335 188.628555,119.296926" id="Path-3" stroke="#B7D9D8" stroke-width="0.5" transform="translate(111.774400, 122.747059) scale(1, -1) translate(-111.774400, -122.747059) "></path>
+                <path d="M33.9775111,68.8636685 C60.781547,27.0280292 123.60002,-11.0189826 191.769969,20.7540272" id="Path-3" stroke="#B7D9D8" stroke-width="0.5" transform="translate(112.873740, 38.916806) rotate(-354.000000) translate(-112.873740, -38.916806) "></path>
+                <rect id="Rectangle-1" stroke="#B7D9D7" stroke-width="0.5" stroke-dasharray="2" x="142" y="29" width="102" height="96" rx="15"></rect>
+                <path d="M184,131 C188.464666,123.129308 185.973942,123.131548 191.415187,130.245749" id="Path-7" stroke="#B7D9D7" transform="translate(187.707593, 128.000000) rotate(-326.000000) translate(-187.707593, -128.000000) "></path>
+                <path d="M186.957109,30.7693023 C191.421775,22.8986108 188.93105,22.9008499 194.372295,30.0150513" id="Path-7" stroke="#B7D9D7" transform="translate(190.664702, 27.769302) rotate(-231.000000) translate(-190.664702, -27.769302) "></path>
+                <text id="then()" font-family="FiraMono-Regular, Fira Mono" font-size="6" font-weight="normal" fill="#73BB8B">
+                    <tspan x="210" y="119">then()</tspan>
+                </text>
+                <text id="catch()" font-family="FiraMono-Regular, Fira Mono" font-size="6" font-weight="normal" fill="#BA7D5A">
+                    <tspan x="204" y="74">catch()</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
