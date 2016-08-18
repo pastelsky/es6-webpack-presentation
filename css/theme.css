@@ -352,11 +352,6 @@ section[data-state="webpackLive"], section[data-state="heirarchyGraph"] {
 .padded {
   padding: 5vh 20vw; }
 
-.slides {
-  left: 0 !important;
-  top: 0 !important;
-  transform: none !important; }
-
 @keyframes squiggly-anim {
   0% {
     -webkit-filter: url("#squiggly-0");

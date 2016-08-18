@@ -10,8 +10,8 @@
 }
 
 i {
- color: #65E3D1;
- font-style: normal;
+   color: #65E3D1;
+   font-style: normal;
 }
 
 p {
@@ -85,11 +85,6 @@ section[data-state="webpackLive"], section[data-state="heirarchyGraph"] {
     padding: 5vh 20vw; 
 }
 
-.slides {
-  left: 0 !important;
-  top: 0 !important;
-  transform: none !important;
-}
 
 @keyframes squiggly-anim {
     0% {
